@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.7-SNAPSHOT'
+    id 'fabric-loom' version '1.9.2'
     id 'maven-publish'
 }
 
@@ -52,6 +52,7 @@ repositories {
             includeGroup "maven.modrinth"
         }
     }
+    mavenLocal()
 }
 
 dependencies {
@@ -68,7 +69,7 @@ dependencies {
     modImplementation("net.fabricmc.fabric-api:fabric-rendering-data-attachment-v1:0.3.40+73761d2e3b")
     modImplementation(fabricApi.module("fabric-resource-loader-v0", project.fabric_version))
 
-    modImplementation "maven.modrinth:sodium:mc1.20.1-0.5.11"
+    modImplementation "net.caffeinemc:sodium-fabric:0.5.13-snapshot+mc1.20.1-local"
 
     //modImplementation "maven.modrinth:c2me-fabric:0.2.0+alpha.10.49+1.19.4"
     //modImplementation "maven.modrinth:chunks-fade-in:v1.0.3-1.19.4"
